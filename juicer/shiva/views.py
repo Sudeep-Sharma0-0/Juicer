@@ -1,19 +1,17 @@
-import os
 import base64
 import requests
 from django.shortcuts import render, redirect
 from django.core.exceptions import PermissionDenied, SuspiciousOperation
-from dotenv import load_dotenv
+from django.conf import settings
 from . import user_validatian as uv
 from . import gen_data
 from . import models
 
 
-load_dotenv()
+client_id = settings.SPOTIFY_CLIENT_ID
+client_secret = settings.SPOTIFY_CLIENT_SECRET
+redirect_uri = settings.SPOTIFY_REDIRECT_URI
 
-client_id = os.getenv("SPOTIFY_CLIENT_ID")
-client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
-redirect_uri = os.getenv("SPOTIFY_REDIRECT_URI")
 scope = '''playlist-read-private
  playlist-modify-private
  playlist-modify-public

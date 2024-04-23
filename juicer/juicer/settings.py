@@ -22,6 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-)_%$a9sii!u$7hf$y9i=ec41-jbtc1l#!&^dv#tk0mo%68k0)5'
 
+SPOTIFY_CLIENT_ID = "f4f57a3262bb4c0895fb1267c64e3b14"
+SPOTIFY_CLIENT_SECRET = "f70d7732a9f74610b0c308ffbdea778a"
+SPOTIFY_REDIRECT_URI = "http://127.0.0.1: 4269/shiva/login/callback"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
