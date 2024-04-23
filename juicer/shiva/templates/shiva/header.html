@@ -1,0 +1,10 @@
+{% load static %}
+<script src="{% static '/shiva/scripts/buttons.js' %}" defer></script>
+<header id="header">
+  {% if not login %}
+  <button id="login_btn">Login</button>
+  {% else %}
+  <button id="login_btn">Logout</button>
+  <h5>{{ username }}</h5>
+  {% endif %}
+</header>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converter</title>
+</head>
+
+<body>
+  <div id="root">
+    {% include "shiva/header.html"%}
+    <main id="main">
+      {% include "shiva/playlistInput.html" %}
+      <div id="platforms">
+        <section id="source">
+          <h3>Choose Source</h3>
+          {% for platform in platforms %}
+          <button class="{{ platform.title|lower }} platform source_btn">
+            {{ platform.title|title }}
+          </button>
+          {% endfor %}
+        </section>
+        <section id="destn">
+        <h3>Choose Destination</h3>
+        {% for platform in platforms %}
+        <button class="{{ platform.title|lower }} platform destn_btn">
+          {{ platform.title|title }}
+        </button>
+        {% endfor %}
+        </section>
+      </div>
+    </main>
+    {% include "shiva/footer.html" %}
+  </div>
+
+  {% load static %}
+  <script src="{% static 'shiva/scripts/jquery-3.7.1.min.js' %}"></script>
+  <script src="{% static 'shiva/scripts/inputPlaylist.js' %}"></script>
+</body>
+
+</html>

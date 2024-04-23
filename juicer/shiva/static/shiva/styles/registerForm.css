@@ -1,0 +1,9 @@
+#register_form fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+#register_form fieldset > input {
+  max-width: 9rem;
+  margin: .4rem 0;
+}
